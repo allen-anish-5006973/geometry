@@ -11,3 +11,7 @@ func NewRectangle(length, breadth float64) Rectangle {
 	}
 	return Rectangle{length, breadth}
 }
+
+func (rectangle Rectangle) Perimeter() float64 {
+	return 2 * (rectangle.length + rectangle.breadth)
+}
