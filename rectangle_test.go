@@ -46,3 +46,30 @@ func TestRectanglePerimeter(t *testing.T) {
 		assert.Equal(t, 20.8, NewRectangle(5.2, 5.2).Perimeter())
 	})
 }
+
+func TestRectangleArea(t *testing.T) {
+	t.Run("while length is 1 breadth is 1 area should be 1", func(t *testing.T) {
+		assert.Equal(t, 1.0, NewRectangle(1, 1).Area())
+	})
+
+	t.Run("while length is 1 breadth is 2 area should be 2", func(t *testing.T) {
+		assert.Equal(t, 2.0, NewRectangle(1, 2).Area())
+	})
+
+	t.Run("while length is 1 breadth is 1.2 area should be 1.2", func(t *testing.T) {
+		assert.Equal(t, 1.2, NewRectangle(1, 1.2).Area())
+	})
+
+	t.Run("while length is 2 breadth is 1 area should be 2", func(t *testing.T) {
+		assert.Equal(t, 2.0, NewRectangle(2, 1).Area())
+	})
+
+	t.Run("while length is 1.5 breadth is 1 area should be 1.5", func(t *testing.T) {
+		assert.Equal(t, 1.5, NewRectangle(1.5, 1).Area())
+	})
+
+	t.Run("while length is 1.5 breadth is 1.5 area should be 2.25", func(t *testing.T) {
+		assert.Equal(t, 2.25, NewRectangle(1.5, 1.5).Area())
+	})
+
+}
