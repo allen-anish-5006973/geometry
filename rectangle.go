@@ -5,6 +5,9 @@ type Rectangle struct {
 	breadth float64
 }
 
-func NewRectangle() Rectangle {
-	return Rectangle{}
+func NewRectangle(length, breadth float64) Rectangle {
+	if length <= 0 || breadth <= 0 {
+		panic("length and breadth must be positive")
+	}
+	return Rectangle{length, breadth}
 }
