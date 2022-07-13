@@ -71,5 +71,4 @@ func TestRectangleArea(t *testing.T) {
 	t.Run("while length is 1.5 breadth is 1.5 area should be 2.25", func(t *testing.T) {
 		assert.Equal(t, 2.25, NewRectangle(1.5, 1.5).Area())
 	})
-
 }
